@@ -1,5 +1,4 @@
 const Application = require('../models/application');
-const Note = require('../models/note');
 
 module.exports = {
     new: newApplication,

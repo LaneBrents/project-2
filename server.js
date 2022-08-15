@@ -12,6 +12,7 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const applicationsRouter = require('./routes/applications');
 const notesRouter = require('./routes/notes');
+
 // connect to the MongoDB with mongoose
 require('./config/database');
 // configure Passport
@@ -48,9 +49,9 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
-app.use('/application', applicationsRouter);
+app.use('/applications', applicationsRouter);
 app.use('/', notesRouter);
-app.use('/notes', notesRouter);
+// app.use('/notes', notesRouter);
 
 
 // invalid request, send 404 page
