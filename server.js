@@ -9,16 +9,15 @@ const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
 
-const indexRoutes = require('./routes/index');
-
-// create the Express app
-const app = express();
-
+const indexRouter = require('./routes/index');
+const applicationsRouter = require('./routes/applications');
+const notesRouter = require('./routes/notes');
 // connect to the MongoDB with mongoose
 require('./config/database');
 // configure Passport
 require('./config/passport');
-
+// create the Express app
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +39,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
   res.locals.user = req.user; // assinging a property to res.locals, makes that said property (user) availiable in every
@@ -48,16 +46,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
-
-
-
-
-
-
-
+app.use('/', indexRouter);
+app.use('/application', applicationsRouter);
+app.use('/', notesRouter);
+app.use('/notes', notesRouter);
 
 
 // invalid request, send 404 page
