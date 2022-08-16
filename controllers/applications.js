@@ -4,8 +4,19 @@ module.exports = {
     new: newApplication,
     create,
     index,
-    //show,
+    show,
 };
+
+function show(req, res) {
+    Application.findById(req.params.id, function(err, appDocumentCreated) {
+        res.render('applications/show.ejs', {
+            company,
+            position,
+            date,
+            stat,
+        });
+    });
+}
 
 function index(req, res) {
     Application.find({}, function(err, allOfTheApplicationsInTheDatabase) {
@@ -24,14 +35,13 @@ function newApplication(req, res) {
     res.render('applications/new.ejs');
 }
 
+// Create a new application
 function create(req, res) {
     Application.create(req.body, function(err, appDocumentCreated) {
         if(err) {
-            console.log(err, " <- err in the application create controller");
+            console.log(err, " <- err in the application create controller")
             return res.render('applications/new.ejs');
         }
-
-        console.log(appDocumentCreated, " <- application created in the db");
         res.redirect(`/applications/${appDocumentCreated._id}`);
-    });
+    })
 }

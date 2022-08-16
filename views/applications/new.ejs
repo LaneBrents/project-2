@@ -9,13 +9,15 @@
 </head>
 <body>
     <nav>
-        <a href="/applications">ALL APPLICATIONS</a>
+        <a href="/applications">My Applications</a>
         <% if (user) { %>
             <a href="/logout">LOG OUT</a>
           <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
           <% } %>
  </nav>
+ <div class="container-new">
+    <div class="card">
  <form id="new-form" action="/applications" method="POST">
     <label>Company:</label>
     <input type="text" name="company">
@@ -32,6 +34,8 @@
     </select>
     <input type="submit" value="Add Application">
  </form>
+ </div>
+ </div>
     
 </body>
 </html>

@@ -21,7 +21,7 @@
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: hsl(216, 41%, 84%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -43,9 +43,42 @@ nav > a {
 
 nav > a:hover {
   color: white;
-  background-color: #424748;
+  background-color: hsl(190, 67%, 50%);
 }
 
 nav > a.active {
   color: white;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.container-new {
+  margin-top: 3rem;
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: antiquewhite;
+  background-clip: border-box;
+  border: 1px solid grey;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: left;
 }

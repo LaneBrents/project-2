@@ -9,17 +9,16 @@
 </head>
 <body>
     <nav>
-        <a href="/applications">ALL APPLICATIONS</a>
+        <a href="/applications">My Applications</a>
         <% if (user) { %>
             <a href="/logout">LOG OUT</a>
           <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
           <% } %>
  </nav>
-
-    <form id="add-note-form" action="/applications/notes">
+    <form id="add-note-form" action="/applications" method="POST">
         <label>Add a Note:</label>
-        <input type="textbox" name="text">
+        <input type="text" name="text">
         <input type="submit" value="Add Note">
     </form>
     
