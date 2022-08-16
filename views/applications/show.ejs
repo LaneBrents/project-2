@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Applications</title>
+</head>
+<body>
+    <nav>
+        <a href="/applications">ALL APPLICATIONS</a>
+        <% if (user) { %>
+            <a href="/applications/new">Add an Application</a>
+            <a href="/logout">LOG OUT</a>
+          <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
+          <% } %>
+ </nav>
+
+
+ <section id="show-page">
+    <div>Company:</div>
+    <div>
+        <%= application.company %> 
+    </div>
+    <div>Position:</div>
+    <div>
+        <%= application.position %> 
+    </div>
+    <div>Date Applied:</div>
+    <div>
+        <%= application.Date %> 
+    </div>
+    <div>Status:</div>
+    <div>
+        <%= application.stat %> 
+    </div>
+    <!-- <div>Notes:</div>
+    <div>
+        <%= application. %> 
+    </div>
+    <div>Update:</div>
+    <div>
+        <%= application.position %> 
+    </div>
+    <div>Remove:</div>
+    <div>
+        <%= application.position %> 
+    </div> -->
+
+</section>
+
+
+<% if (user) { %>
+    <br><br>
+    <h2>Notes:</h2>
+    <form id="add-note-form" method="POST" action="/applications/<%= application._id %>/notes">
+        <label>Add a Note:</label>
+        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        <input type="submit" value="Add Note">
+    </form>
+    <% } %>
+    
+</body>
+</html>
+
+

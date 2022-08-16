@@ -5,26 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>login page</title>
+    <title>Add-Note</title>
 </head>
 <body>
     <nav>
+        <a href="/applications">ALL APPLICATIONS</a>
         <% if (user) { %>
             <a href="/logout">LOG OUT</a>
           <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
           <% } %>
  </nav>
- <h1>Welcome to JobTrack!</h1>
- <br>
- <br>
- <h2>The easiest way to organize all of your job application information in one place</h2>
- <br>
- <br>
- <h3>Please log in using google to start using JobTrack</h3>
+
+    <form id="add-note-form" action="/applications/notes">
+        <label>Add a Note:</label>
+        <input type="textbox" name="text">
+        <input type="submit" value="Add Note">
+    </form>
     
 </body>
 </html>
-
-   
-

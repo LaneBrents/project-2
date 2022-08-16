@@ -1,16 +1,59 @@
-<%- include('../partials/header') %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Watch List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>My Applications</title>
 </head>
 <body>
-    <div>My Watch List</div>
-    
+    <nav>
+        <% if (user) { %>
+            <a href="/applications/new">Add an Application</a>
+            <a href="/applications/notes">Add a Note</a>
+            <a href="/logout">LOG OUT</a>
+          <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
+          <% } %>
+ </nav>
+
+ <h1>My Application List</h1>
+
+ <table id="list">
+    <thead>
+        <tr>
+            <th>Company</th>
+            <br>
+            <th>Position</th>
+            <br>
+            <th>Date Applied</th>
+            <br>
+            <th>Status</th>
+            <br>
+            <th>Notes</th>
+            <br>
+            <th>Update</th>
+            <br>
+            <th>Remove</th>
+            <br>
+        </tr>
+    </thead>
+    <tbody>
+        <% application.forEach(function(a) { %>
+            <tr>
+                <td><%= a.company %> </td>
+                <td><%= a.position %> </td>
+                <td><%= a.date %> </td>
+                <td><%= a.stat %> </td>
+                <td> <a href="/applications/<%= a._id %>">Notes</a> </td>
+                <td><%=  %> </td>
+                <td><%= a.Remove %> </td>
+            </tr>
+
+        <% }); %>
+    </tbody>
+</table>
+
 </body>
 </html>
-<%- include('../partials/footer') %>
