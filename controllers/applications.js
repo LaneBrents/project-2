@@ -5,6 +5,9 @@ module.exports = {
     create,
     index,
     show,
+    edit,
+    update,
+    delete: deleteApplication,
 };
 
 
@@ -19,7 +22,7 @@ function show(req, res) {
     });
 }
 
-
+// Shows the index page
 function index(req, res) {
     Application.find({}, function(err, allOfTheApplicationsInTheDatabase) {
         console.log(allOfTheApplicationsInTheDatabase, " <- all the applications");
@@ -33,12 +36,12 @@ function index(req, res) {
     });
 }
 
-
+// Moves to the new application screen
 function newApplication(req, res) {
     res.render('applications/new.ejs');
 }
 
-
+// Creates the application
 function create(req, res) {
     Application.create(req.body, function(err, appDocumentCreated) {
         if(err) {
@@ -49,10 +52,27 @@ function create(req, res) {
     })
 }
 
+// Shows the edit page for the application
+function edit(req, res) {
+    Application.findById(req.params.id, function(err, appDocumentCreated) {
+        res.render('applications/edit.ejs', {
+            application: appDocumentCreated,
+        });
+    });
+}
+
+// Updates the application itself
 function update(req, res) {
     Application.findByIdAndUpdate(req.params.id, req.body, function(err, appDocumentCreated) {
         appDocumentCreated.save(function(err) {
             res.redirect('/applications');
         });
+    });
+}
+
+// Deletes the application
+function deleteApplication(req, res) {
+    Application.findByIdAndDelete(req.params.id, function(err) {
+        res.redirect('/applications');
     });
 }
