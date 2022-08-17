@@ -18,8 +18,8 @@ function show(req, res) {
             position,
             dateApplied,
             stat,
-            // update,
-            // delete: deleteApplication,
+            edit,
+            remove,
         });
     });
 }
@@ -72,9 +72,30 @@ function update(req, res) {
     });
 }
 
+
 // Deletes the application
 function deleteApplication(req, res) {
-    Application.findByIdAndDelete(req.params.id, function(err) {
+    Application.findByIdAndRemove(req.params.id, function(err) {
         res.redirect('/applications');
     });
 }
+
+// async function deleteApplication(req, res){
+//     try {
+
+//         const appDocumentCreated = await Application.findOne({
+//             'applications._id': req.params.id,
+//             'applications.user': req.user._id
+//         });
+
+//         if(!appDocumentCreated) return res.redirect('/applications');
+
+//         appDocumentCreated.Application.remove(req.params.id);
+
+//         await appDocumentCreated.save();
+
+//         res.redirect(`/applications`)
+//     } catch(err) {
+//         res.send(err)
+//     }
+// }

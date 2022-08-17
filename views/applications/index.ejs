@@ -48,7 +48,13 @@
                 <td><%= a.stat %> </td>
                 <td> <a href="/applications/<%= a._id %>/notes">Notes</a> </td>
                 <td> <a href="/applications/<%= a._id %>/edit">Update</a> </td>
-                <td><%= a.Remove %> <center><button>X</button></center> </td>
+                <td>
+                    <% { %>
+                        <form action="/applications/<%= a._id %>?_method=DELETE" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                      <% } %>
+                    </td>
             </tr>
 
         <% }); %>

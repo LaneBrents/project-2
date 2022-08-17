@@ -19,25 +19,25 @@
  <h1>Edit:</h1>
  <div class="container-update">
     <div class="card">
- <form id="update-form" action="/applications" method="POST">
+ <form id="update-form" action="/applications/<%= application._id %>?_method=PUT" method="POST">
     <label>Company:</label>
-    <input type="text" name="company">
+    <input type="text" name="company" value="<%= application.company%>">
     <br>
     <label>Position:</label>
-    <input type="text" name="position">
+    <input type="text" name="position" value="<%= application.position%>">
     <br>
     <label>Date Applied:</label>
-    <input type="date" name="dateApplied">
+    <input type="date" name="dateApplied" value="<%= application.Date%>">
     <br>
     <label>Status:</label>
-    <select name="stat">
+    <select name="stat" value="<%= application.stat%>">
         <option value="applied">Applied</option>
         <option value="rejected">Rejected</option>
         <option value="wishlist">WishList</option>
         <option value="interview">Interview</option>
     </select>
     <br>
-    <input type="submit" value="Add Application" id="button">
+    <input type="submit" value="Update Application" id="button">
  </form>
     
 </body>

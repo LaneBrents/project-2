@@ -7,6 +7,7 @@ router.get('/', applicationController.index);
 router.get('/new', isLoggedIn, applicationController.new);
 
 router.get('/id', applicationController.show);
+router.get('/:id/edit', isLoggedIn, applicationController.edit);
 router.post('/', isLoggedIn, applicationController.create);
 router.delete('/:id', isLoggedIn, applicationController.delete);
 router.put('/:id', isLoggedIn, applicationController.update);
