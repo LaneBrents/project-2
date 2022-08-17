@@ -45,6 +45,6 @@ function create(req, res) {
             console.log(err, " <- err in the application create controller")
             return res.render('applications/new.ejs');
         }
-        res.redirect(`/applications/${appDocumentCreated._id}`);
+        res.redirect(`/applications`);
     })
 }

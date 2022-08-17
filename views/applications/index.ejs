@@ -12,7 +12,6 @@
     <nav>
         <% if (user) { %>
             <a href="/applications/new">Add an Application</a>
-            <a href="/applications/notes">Add a Note</a>
             <a href="/logout">LOG OUT</a>
           <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
@@ -47,7 +46,7 @@
                 <td><%= a.position %> </td>
                 <td><%= a.date %> </td>
                 <td><%= a.stat %> </td>
-                <td> <a href="/applications/<%= a._id %>">Notes</a> </td>
+                <td> <a href="/applications/<%= a._id %>/notes">Notes</a> </td>
                 <!-- <td><%= a.update %> </td>
                 <td><%= a.Remove %> </td> -->
             </tr>

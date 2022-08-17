@@ -2,7 +2,8 @@ const Application = require('../models/application');
 
 module.exports = {
     create,
-    delete: deleteNote
+    delete: deleteNote,
+    new: newNote,
 };
 
 async function deleteNote(req, res){
@@ -25,6 +26,15 @@ async function deleteNote(req, res){
         res.send(err)
     }
 }
+function newNote(req, res) {
+    Application.findById(req.params.id, function(err, appDocumentCreated) {
+        res.render('applications/notes.ejs', {
+            notes: appDocumentCreated.notes,
+            application: appDocumentCreated,
+            
+        });
+    });
+}
 
 function create(req, res) {
     console.log(req.user, " <- this is req.user")
@@ -37,7 +47,7 @@ function create(req, res) {
         applicationDocument.notes.push(req.body);
 
         applicationDocument.save(function(err) {
-            res.redirect(`/applications/${req.params.id}`);
+            res.redirect(`/applications/${req.params.id}/notes`);
         });
     });
 }
