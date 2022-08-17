@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/applications">My Applications</a>
+        <% if (user) { %>
+            <a href="/logout">LOG OUT</a>
+          <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
+          <% } %>
+ </nav>
+
+ <h1>Edit:</h1>
+ <div class="container-update">
+    <div class="card">
+ <form id="update-form" action="/applications" method="POST">
+    <label>Company:</label>
+    <input type="text" name="company">
+    <br>
+    <label>Position:</label>
+    <input type="text" name="position">
+    <br>
+    <label>Date Applied:</label>
+    <input type="date" name="dateApplied">
+    <br>
+    <label>Status:</label>
+    <select name="stat">
+        <option value="applied">Applied</option>
+        <option value="rejected">Rejected</option>
+        <option value="wishlist">WishList</option>
+        <option value="interview">Interview</option>
+    </select>
+    <br>
+    <input type="submit" value="Add Application" id="button">
+ </form>
+    
+</body>
+</html>

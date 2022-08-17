@@ -30,6 +30,8 @@ const applicationSchema = new mongoose.Schema({
         required: true,
     },
     notes: [noteSchema],
+    // update: ,
+    // delete:
 });
 
 module.exports = mongoose.model('Application', applicationSchema);

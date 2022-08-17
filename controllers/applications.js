@@ -18,6 +18,8 @@ function show(req, res) {
             position,
             dateApplied,
             stat,
+            // update,
+            // delete: deleteApplication,
         });
     });
 }
