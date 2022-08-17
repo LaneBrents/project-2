@@ -12,6 +12,25 @@ const noteSchema = new mongoose.Schema(
 );
 
 
+const updateSchema = new mongoose.Schema({
+    company: {
+        type: String,
+        required: true,
+    },
+    position: {
+        type: String,
+        required: true,
+    },
+    dateApplied: {
+        type: Date,
+        required: true,
+    },
+    stat: {
+        type: String,
+        required: true,
+    },
+});
+
 const applicationSchema = new mongoose.Schema({
     company: {
         type: String,
@@ -30,7 +49,7 @@ const applicationSchema = new mongoose.Schema({
         required: true,
     },
     notes: [noteSchema],
-    // update: ,
+    update: [updateSchema],
     // delete:
 });
 

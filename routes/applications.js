@@ -8,5 +8,7 @@ router.get('/new', isLoggedIn, applicationController.new);
 
 router.get('/id', applicationController.show);
 router.post('/', isLoggedIn, applicationController.create);
+router.delete('/:id', isLoggedIn, applicationController.delete);
+router.put('/:id', isLoggedIn, applicationController.update);
 
 module.exports = router;
