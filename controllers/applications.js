@@ -48,3 +48,11 @@ function create(req, res) {
         res.redirect(`/applications`);
     })
 }
+
+function update(req, res) {
+    Application.findByIdAndUpdate(req.params.id, req.body, function(err, appDocumentCreated) {
+        appDocumentCreated.save(function(err) {
+            res.redirect('/applications');
+        });
+    });
+}
