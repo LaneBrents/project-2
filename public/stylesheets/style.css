@@ -21,7 +21,7 @@
 
 body > nav {
   grid-area: nav;
-  background-color: hsl(216, 41%, 84%);
+  background-color: #5BC4BA;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -43,7 +43,7 @@ nav > a {
 
 nav > a:hover {
   color: white;
-  background-color: hsl(190, 67%, 50%);
+  background-color: #7CE5C6;
 }
 
 nav > a.active {
@@ -59,10 +59,8 @@ table, th, td {
 }
 
 .container-new {
-  margin-top: 3rem;
+  margin-top: 7%;
   width: 50%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -73,12 +71,47 @@ table, th, td {
   flex-direction: column;
   min-width: none;
   word-wrap: break-word;
-  background-color: antiquewhite;
+  background-color: #D5E7D9;
   background-clip: border-box;
-  border: 1px solid grey;
+  border: 2px solid black;
   font-weight: 200;
   letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: 2.8rem;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
 }
+
+#button {
+  padding: 12px;
+  border-radius: 12px;
+}
+
+#startPage {
+  margin-top: 2%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  background-clip: border-box;
+  border: 2px solid black;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 30px;
+  background-color: #D5E7D9;
+  text-align: center;
+}
+
+#list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+

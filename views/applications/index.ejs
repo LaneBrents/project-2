@@ -19,7 +19,7 @@
           <% } %>
     </nav>
 
- <h1>My Application List</h1>
+ <h1><center>My Application List</center></h1>
 
  <table id="list">
     <thead>
@@ -48,8 +48,8 @@
                 <td><%= a.date %> </td>
                 <td><%= a.stat %> </td>
                 <td> <a href="/applications/<%= a._id %>">Notes</a> </td>
-                <td><%=  %> </td>
-                <td><%= a.Remove %> </td>
+                <!-- <td><%= a.update %> </td>
+                <td><%= a.Remove %> </td> -->
             </tr>
 
         <% }); %>

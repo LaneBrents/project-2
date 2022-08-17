@@ -7,16 +7,18 @@ module.exports = {
     show,
 };
 
+
 function show(req, res) {
     Application.findById(req.params.id, function(err, appDocumentCreated) {
         res.render('applications/show.ejs', {
             company,
             position,
-            date,
+            dateApplied,
             stat,
         });
     });
 }
+
 
 function index(req, res) {
     Application.find({}, function(err, allOfTheApplicationsInTheDatabase) {
@@ -31,11 +33,12 @@ function index(req, res) {
     });
 }
 
+
 function newApplication(req, res) {
     res.render('applications/new.ejs');
 }
 
-// Create a new application
+
 function create(req, res) {
     Application.create(req.body, function(err, appDocumentCreated) {
         if(err) {

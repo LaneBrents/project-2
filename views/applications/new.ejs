@@ -21,10 +21,13 @@
  <form id="new-form" action="/applications" method="POST">
     <label>Company:</label>
     <input type="text" name="company">
+    <br>
     <label>Position:</label>
     <input type="text" name="position">
+    <br>
     <label>Date Applied:</label>
     <input type="date" name="date">
+    <br>
     <label>Status:</label>
     <select name="status">
         <option value="applied">Applied</option>
@@ -32,7 +35,8 @@
         <option value="wishlist">WishList</option>
         <option value="interview">Interview</option>
     </select>
-    <input type="submit" value="Add Application">
+    <br>
+    <input type="submit" value="Add Application" id="button">
  </form>
  </div>
  </div>
