@@ -10,9 +10,8 @@ module.exports = {
     delete: deleteApplication,
 };
 
-
 function show(req, res) {
-    Application.findById(req.params.id, function(err, appDocumentCreated) {
+    Application.findById(req.params.id, function (err, appDocumentCreated) {
         res.render('applications/show.ejs', {
             company,
             position,
@@ -26,9 +25,9 @@ function show(req, res) {
 
 // Shows the index page
 function index(req, res) {
-    Application.find({}, function(err, allOfTheApplicationsInTheDatabase) {
+    Application.find({}, function (err, allOfTheApplicationsInTheDatabase) {
         console.log(allOfTheApplicationsInTheDatabase, " <- all the applications");
-        if(err) {
+        if (err) {
             res.send("You have an error trying to find the application");
         }
 
@@ -45,8 +44,8 @@ function newApplication(req, res) {
 
 // Creates the application
 function create(req, res) {
-    Application.create(req.body, function(err, appDocumentCreated) {
-        if(err) {
+    Application.create(req.body, function (err, appDocumentCreated) {
+        if (err) {
             console.log(err, " <- err in the application create controller")
             return res.render('applications/new.ejs');
         }
@@ -56,7 +55,7 @@ function create(req, res) {
 
 // Shows the edit page for the application
 function edit(req, res) {
-    Application.findById(req.params.id, function(err, appDocumentCreated) {
+    Application.findById(req.params.id, function (err, appDocumentCreated) {
         res.render('applications/edit.ejs', {
             application: appDocumentCreated,
         });
@@ -65,8 +64,8 @@ function edit(req, res) {
 
 // Updates the application itself
 function update(req, res) {
-    Application.findByIdAndUpdate(req.params.id, req.body, function(err, appDocumentCreated) {
-        appDocumentCreated.save(function(err) {
+    Application.findByIdAndUpdate(req.params.id, req.body, function (err, appDocumentCreated) {
+        appDocumentCreated.save(function (err) {
             res.redirect('/applications');
         });
     });
@@ -75,27 +74,7 @@ function update(req, res) {
 
 // Deletes the application
 function deleteApplication(req, res) {
-    Application.findByIdAndRemove(req.params.id, function(err) {
+    Application.findByIdAndRemove(req.params.id, function (err) {
         res.redirect('/applications');
     });
 }
-
-// async function deleteApplication(req, res){
-//     try {
-
-//         const appDocumentCreated = await Application.findOne({
-//             'applications._id': req.params.id,
-//             'applications.user': req.user._id
-//         });
-
-//         if(!appDocumentCreated) return res.redirect('/applications');
-
-//         appDocumentCreated.Application.remove(req.params.id);
-
-//         await appDocumentCreated.save();
-
-//         res.redirect(`/applications`)
-//     } catch(err) {
-//         res.send(err)
-//     }
-// }

@@ -6,7 +6,7 @@ module.exports = {
     new: newNote,
 };
 
-async function deleteNote(req, res){
+async function deleteNote(req, res) {
     try {
 
         const applicationDocument = await DocumentfindOne({
@@ -14,24 +14,24 @@ async function deleteNote(req, res){
             'note._user': req.user._id
         });
 
-        if(!applicationDocument) return res.redirect('/applications');
+        if (!applicationDocument) return res.redirect('/applications');
 
         applicationDocument.notes.remove(req.params.id);
 
         await applicationDocument.save();
 
         res.redirect(`/applications/${applicationDocument._id}`)
- 
-    } catch(err) {
+
+    } catch (err) {
         res.send(err)
     }
 }
 function newNote(req, res) {
-    Application.findById(req.params.id, function(err, appDocumentCreated) {
+    Application.findById(req.params.id, function (err, appDocumentCreated) {
         res.render('applications/notes.ejs', {
             notes: appDocumentCreated.notes,
             application: appDocumentCreated,
-            
+
         });
     });
 }
@@ -39,14 +39,14 @@ function newNote(req, res) {
 function create(req, res) {
     console.log(req.user, " <- this is req.user")
 
-    Application.findById(req.params.id, function(err, applicationDocument) {
+    Application.findById(req.params.id, function (err, applicationDocument) {
 
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
 
         applicationDocument.notes.push(req.body);
 
-        applicationDocument.save(function(err) {
+        applicationDocument.save(function (err) {
             res.redirect(`/applications/${req.params.id}/notes`);
         });
     });

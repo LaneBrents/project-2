@@ -19,7 +19,7 @@
   margin-top: -5px;
 }
 
-body > nav {
+body>nav {
   grid-area: nav;
   background-color: #5BC4BA;
   display: flex;
@@ -28,30 +28,32 @@ body > nav {
   padding: 0 20px 0 30px;
 }
 
-nav > img {
+nav>img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
 }
 
-nav > a {
+nav>a {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
 }
 
-nav > a:hover {
+nav>a:hover {
   color: white;
   background-color: #7CE5C6;
 }
 
-nav > a.active {
+nav>a.active {
   color: white;
 }
 
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   width: 100%;
   border-collapse: collapse;
@@ -161,4 +163,3 @@ h1 {
   padding: 30px;
   border-radius: 15px;
 }
-
