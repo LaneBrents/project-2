@@ -20,10 +20,11 @@
 }
 
 body>nav {
+  font-family: 'Nunito', sans-serif;
   grid-area: nav;
   background-color: #5BC4BA;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 30px;
 }
@@ -54,26 +55,42 @@ nav>a.active {
 table,
 th,
 td {
+  font-family: 'Nunito', sans-serif;
   border: 1px solid black;
-  width: 100%;
   border-collapse: collapse;
-
+  background-color: #ECF5F4;
 }
 
-.container-new {
+#new-form {
   margin-top: 7%;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-}
-
-.card {
   position: relative;
   display: flex;
   flex-direction: column;
   min-width: none;
   word-wrap: break-word;
-  background-color: #D5E7D9;
+  background-color: #ECF5F4;
+  background-clip: border-box;
+  border: 2px solid black;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.card {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #ECF5F4;
   background-clip: border-box;
   border: 2px solid black;
   font-weight: 200;
@@ -91,7 +108,8 @@ td {
 }
 
 #startPage {
-  margin-top: 2%;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 8%;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -106,7 +124,7 @@ td {
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 30px;
-  background-color: #D5E7D9;
+  background-color: #ECF5F4;
   text-align: center;
 }
 
@@ -114,10 +132,6 @@ td {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-}
-
-h1 {
-  text-align: center;
 }
 
 #note-form {
@@ -130,7 +144,7 @@ h1 {
   flex-direction: column;
   min-width: none;
   word-wrap: break-word;
-  background-color: #D5E7D9;
+  background-color: #ECF5F4;
   background-clip: border-box;
   border: 2px solid black;
   font-weight: 200;
@@ -152,7 +166,7 @@ h1 {
   flex-direction: column;
   min-width: none;
   word-wrap: break-word;
-  background-color: #D5E7D9;
+  background-color: #ECF5F4;
   background-clip: border-box;
   border: 2px solid black;
   font-weight: 200;
@@ -163,3 +177,14 @@ h1 {
   padding: 30px;
   border-radius: 15px;
 }
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }

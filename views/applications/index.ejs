@@ -14,6 +14,7 @@
 
 <body>
     <nav class="background-color: #e3f2fd;">
+       <h1>JobTrack</h1>
         <% if (user) { %>
             <a href="/applications/new">Add an Application</a>
             <a href="/logout">LOG OUT</a>
@@ -27,13 +28,13 @@
         <caption>My Applications</caption>
         <thead class="table-secondary">
             <tr>
-                <th scope="col-2">Company</th>
-                <th scope="col-2">Position</th>
-                <th scope="col-2">Date Applied</th>
-                <th scope="col-2">Status</th>
-                <th scope="col-2">Notes</th>
-                <th scope="col-1">Update</th>
-                <th scope="col-1">Remove</th>
+                <th >Company</th>
+                <th >Position</th>
+                <th >Date Applied</th>
+                <th >Status</th>
+                <th >Notes</th>
+                <th >Update</th>
+                <th >Remove</th>
                 <br>
                 <br>
             </tr>
@@ -41,7 +42,7 @@
         <tbody class="table-group-divider">
             <% application.forEach(function(a) { %>
                 <tr>
-                    <td>
+                    <td >
                         <%= a.company %>
                     </td>
                     <td>
@@ -53,12 +54,12 @@
                     <td>
                         <%= a.stat %>
                     </td>
-                    <td> <a href="/applications/<%= a._id %>/notes">Notes</a> </td>
-                    <td> <a href="/applications/<%= a._id %>/edit">Update</a> </td>
+                    <td> <button class="btn btn-outline-info"><a href="/applications/<%= a._id %>/notes">Notes</a></button> </td>
+                    <td> <button class="btn btn-outline-warning"><a href="/applications/<%= a._id %>/edit">Update</a></button> </td>
                     <td>
                         <% { %>
                             <form action="/applications/<%= a._id %>?_method=DELETE" method="POST">
-                                <button type="submit">Delete</button>
+                                <button class="btn btn-outline-danger" type="submit">Delete</button>
                             </form>
                             <% } %>
                     </td>
