@@ -23,7 +23,7 @@ I am going to create a job-application tracker to make it easier to list all of 
 ![alt text](https://imgur.com/a/iJaUfOt)
 [Link to trello](https://trello.com/b/KLly3iFi/project-2-management)
 ![alt text](https://imgur.com/a/scB9vwE)
-![alt text](https://imgur.com/xWIRL89)
+![alt text](https://i.imgur.com/xWIRL89.png)
 [Link to whimsical](https://whimsical.com/project-2-PQASG3T5vGryLFyYVvo8QU)
 
 ## Future Icebox Items
