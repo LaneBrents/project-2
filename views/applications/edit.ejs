@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>edit</title>
 </head>
 <body>
     <nav>
@@ -16,10 +17,9 @@
           <% } %>
  </nav>
 
- <h1>Edit:</h1>
- <div class="container-update">
-    <div class="card">
- <form id="update-form" action="/applications/<%= application._id %>?_method=PUT" method="POST">
+ <div id="update-form">
+ <form id="updateForm" action="/applications/<%= application._id %>?_method=PUT" method="POST">
+    <h1>Edit:</h1>
     <label>Company:</label>
     <input type="text" name="company" value="<%= application.company%>">
     <br>
@@ -39,6 +39,9 @@
     <br>
     <input type="submit" value="Update Application" id="button">
  </form>
+ </div>
     
+
+
 </body>
 </html>

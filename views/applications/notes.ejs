@@ -16,11 +16,15 @@
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
           <% } %>
  </nav>
+ <div id="note-form">
     <form id="add-note-form" action="/applications/<%= application._id %>/notes" method="POST">
         <label>Add a Note:</label>
         <input type="text" name="content">
         <input type="submit" value="Add Note">
     </form>
+    </div>
+    <br>
+    <br>
 
     <% notes.forEach(function(a) { %>
         <tr>

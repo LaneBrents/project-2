@@ -114,4 +114,51 @@ table, th, td {
   width: 80%;
 }
 
+h1 {
+  text-align: center;
+}
+
+#note-form {
+  margin-top: 7%;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #D5E7D9;
+  background-clip: border-box;
+  border: 2px solid black;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+#update-form {
+  margin-top: 7%;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #D5E7D9;
+  background-clip: border-box;
+  border: 2px solid black;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+}
 
