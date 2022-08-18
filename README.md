@@ -1,5 +1,7 @@
 # JobTrack: Job-Application Tracker app
-I am going to create a job-application tracker to make it easier to list all of the information on jobs that you have applied to or are interested in. 
+JobTrack is a job tracker that holds all of your application information when researching and applying to new jobs.
+
+I created this webpage in order to help people organize and keep all of their applications and information in one simple place.
 
 ## Deployment Link
 [Link to JobTrack](https://jobtrack123.herokuapp.com/)
@@ -20,9 +22,9 @@ I am going to create a job-application tracker to make it easier to list all of 
 * Express
 
 ## Planning
-![alt text]([img]https://i.imgur.com/i8tMcxy.png[/img])
+![alt text](https://i.imgur.com/i8tMcxy.png)
 [Link to trello](https://trello.com/b/KLly3iFi/project-2-management)
-![alt text]([img]https://i.imgur.com/PSIGP2v.png[/img])
+![alt text](https://i.imgur.com/PSIGP2v.png)
 ![alt text](https://i.imgur.com/xWIRL89.png)
 [Link to whimsical](https://whimsical.com/project-2-PQASG3T5vGryLFyYVvo8QU)
 
