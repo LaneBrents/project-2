@@ -5,10 +5,10 @@ I am going to create a job-application tracker to make it easier to list all of 
 [Link to JobTrack](https://jobtrack123.herokuapp.com/)
 
 ## Visuals
-![alt text](https://imgur.com/a/3TGOFcS)
-![alt text](https://imgur.com/a/FdiV3RN)
-![alt text](https://imgur.com/a/dWUEsea)
-![alt text](https://imgur.com/a/Z0frDk3)
+![alt text](https://i.imgur.com/qCP4kXI.png)
+![alt text](https://i.imgur.com/DiwcKDG.png)
+![alt text](https://i.imgur.com/qnO1cdX.png)
+![alt text](https://i.imgur.com/W3bY2Bb.png)
 ## Technology Used
 * Javascript
 * HTML
@@ -20,9 +20,9 @@ I am going to create a job-application tracker to make it easier to list all of 
 * Express
 
 ## Planning
-![alt text](https://imgur.com/a/iJaUfOt)
+![alt text]([img]https://i.imgur.com/i8tMcxy.png[/img])
 [Link to trello](https://trello.com/b/KLly3iFi/project-2-management)
-![alt text](https://imgur.com/a/scB9vwE)
+![alt text]([img]https://i.imgur.com/PSIGP2v.png[/img])
 ![alt text](https://i.imgur.com/xWIRL89.png)
 [Link to whimsical](https://whimsical.com/project-2-PQASG3T5vGryLFyYVvo8QU)
 
