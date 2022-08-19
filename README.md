@@ -4,7 +4,7 @@ JobTrack is a job tracker that holds all of your application information when re
 I created this webpage in order to help people organize and keep all of their applications and information in one simple place.
 
 ## Deployment Link
-[Link to JobTrack](https://jobtrack123.herokuapp.com/)
+[Link to JobTrack](https://jobtracktwo.herokuapp.com)
 
 ## Visuals
 ![alt text](https://i.imgur.com/qCP4kXI.png)
